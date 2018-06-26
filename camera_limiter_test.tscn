@@ -30,7 +30,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CameraLimitArea" type="Area2D" parent="ground" index="1"]
 
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
