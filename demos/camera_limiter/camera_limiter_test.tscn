@@ -4,7 +4,9 @@
 [ext_resource path="res://addons/camera_limiter/camera_limiting_area.gd" type="Script" id=2]
 [ext_resource path="res://addons/camera_limiter/area_2d.svg" type="Texture" id=3]
 [ext_resource path="res://addons/camera_limiter/focus_limiter.gd" type="Script" id=4]
-[ext_resource path="res://addons/camera_limiter/node.svg" type="Texture" id=5]
+[ext_resource path="res://addons/movement/node.svg" type="Texture" id=5]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

@@ -10,12 +10,12 @@ config_version=3
 
 [application]
 
-config/name="Addon: 2D Camera Limiter"
+config/name="Markopolodev Addons"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "camera_limiter" )
+enabled=PoolStringArray( "camera_limiter", "movement" )
 
 [rendering]
 
