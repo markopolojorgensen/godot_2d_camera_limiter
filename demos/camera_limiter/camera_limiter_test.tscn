@@ -6,8 +6,6 @@
 [ext_resource path="res://addons/camera_limiter/focus_limiter.gd" type="Script" id=4]
 [ext_resource path="res://addons/movement/node.svg" type="Texture" id=5]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -18,7 +16,7 @@ extents = Vector2( 500, 400 )
 custom_solver_bias = 0.0
 radius = 30.0
 
-[node name="world" type="Node" index="0"]
+[node name="world" type="Node"]
 
 [node name="ground" type="Node2D" parent="." index="0"]
 
