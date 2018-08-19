@@ -19,3 +19,10 @@ func target_spotted(target):
 func target_lost(target):
 	$Label.text = "No Aggro..."
 
+
+
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
+

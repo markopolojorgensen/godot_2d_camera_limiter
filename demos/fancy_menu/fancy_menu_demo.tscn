@@ -7,7 +7,7 @@
 [ext_resource path="res://addons/fancy_menu/menu_focus_manager.gd" type="Script" id=5]
 [ext_resource path="res://addons/fancy_menu/node.svg" type="Texture" id=6]
 
-[node name="fancy_menu_demo" type="Node2D" index="0"]
+[node name="fancy_menu_demo" type="Node2D"]
 
 script = ExtResource( 1 )
 
