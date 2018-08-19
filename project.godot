@@ -15,7 +15,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "aggro", "camera_limiter", "movement" )
+enabled=PoolStringArray( "aggro", "camera_limiter", "fancy_menu", "movement" )
 
 [rendering]
 
