@@ -7,10 +7,7 @@ path="res://.import/node.svg-892677c9f4e88b5d6e8e4bd764996204.stex"
 [deps]
 
 source_file="res://addons/fancy_menu/node.svg"
-source_md5="62a7442f44910f9a67b7884b32ad6205"
-
 dest_files=[ "res://.import/node.svg-892677c9f4e88b5d6e8e4bd764996204.stex" ]
-dest_md5="8a0e2a152f9e3bb60f969b5a21ba7a93"
 
 [params]
 

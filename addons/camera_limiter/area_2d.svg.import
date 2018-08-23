@@ -7,10 +7,7 @@ path="res://.import/area_2d.svg-d492c02c5087daaf8500232847c191d4.stex"
 [deps]
 
 source_file="res://addons/camera_limiter/area_2d.svg"
-source_md5="ca3f35c2f0754f4ed1c529d3e4a2f965"
-
 dest_files=[ "res://.import/area_2d.svg-d492c02c5087daaf8500232847c191d4.stex" ]
-dest_md5="283239096925b447a3bbc12fc5198e2d"
 
 [params]
 
