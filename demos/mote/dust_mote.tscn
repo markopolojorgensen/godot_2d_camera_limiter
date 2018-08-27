@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/mote/mote.gd" type="Script" id=1]
+[ext_resource path="res://addons/mote/node_2d.svg" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://demos/mote/Sprite.gd" type="Script" id=4]
+
+[node name="DustMote" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+min_velocity = Vector2( -25, 25 )
+max_velocity = Vector2( -75, 75 )
+spawn_border = 1.2
+wrap_border = 32
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0.314902 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Visibility" ]
+lifetime = 5.0
+fade_time = 2
+
+[node name="Tween" type="Tween" parent="Sprite" index="0"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Timer" type="Timer" parent="Sprite" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+
