@@ -20,6 +20,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_editor_icon": ExtResource( 4 )
 }
+debug = true
 
 [node name="Timer" type="Timer" parent="Character" index="1"]
 
