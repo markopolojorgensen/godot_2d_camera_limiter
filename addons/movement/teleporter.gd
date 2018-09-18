@@ -23,6 +23,7 @@ func teleport(new_destination):
 	# disable physics
 	body.set_physics_process(false)
 	
+	# wait for physics engine to chill out
 	time_remaining = time_buffer
 	set_process(true)
 	yield(self, "buffer_expired")
@@ -30,11 +31,12 @@ func teleport(new_destination):
 	# do teleport
 	body.global_position = new_destination
 	
+	# wait again to prevent physics engine from undoing teleport
 	time_remaining = time_buffer
 	set_process(true)
 	yield(self, "buffer_expired")
 	
-	# enable physics
+	# re-enable physics
 	body.set_physics_process(true)
 	teleporting = false
 

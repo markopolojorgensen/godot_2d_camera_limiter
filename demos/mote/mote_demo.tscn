@@ -25,7 +25,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 376, 236 ), Vector2( 679, 95 ), Vector2( 253.776, 240.96 ) ]
 }
 
-[node name="mote_demo" type="Node2D" index="0"]
+[node name="mote_demo" type="Node2D"]
 
 script = ExtResource( 1 )
 

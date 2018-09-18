@@ -6,7 +6,7 @@
 [ext_resource path="res://addons/convenient_state_machine/node.svg" type="Texture" id=4]
 [ext_resource path="res://demos/convenient_state_machine/gui_timer.gd" type="Script" id=5]
 
-[node name="StateMachineDemo" type="Node" index="0"]
+[node name="StateMachineDemo" type="Node"]
 
 script = ExtResource( 1 )
 

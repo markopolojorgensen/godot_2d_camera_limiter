@@ -1,0 +1,152 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://demos/escape_to_quit.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://demos/camera_shake/Player.gd" type="Script" id=3]
+[ext_resource path="res://addons/camera_shake/camera_shake.gd" type="Script" id=4]
+[ext_resource path="res://addons/camera_shake/node.svg" type="Texture" id=5]
+[ext_resource path="res://addons/noise_generators/noise_generator.gd" type="Script" id=6]
+[ext_resource path="res://addons/noise_generators/node.svg" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "player_walk"
+length = 10.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.7, 5.3, 8.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 342.387, 233.826 ), Vector2( 771.624, -138.625 ), Vector2( 248.857, -319.005 ) ]
+}
+
+[node name="CameraShakeDemo" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Player" type="Sprite" parent="." index="0"]
+
+position = Vector2( 120.943, 118.292 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="0"]
+
+anchor_mode = 1
+rotating = true
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
+smoothing_speed = 6.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Smoothing" ]
+
+[node name="CameraShake" type="Node" parent="Player/Camera2D" index="0"]
+
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_icon": ExtResource( 5 )
+}
+camera_path = NodePath("..")
+noise_generators_path = NodePath("noise")
+trauma_debug_label_path = NodePath("../../../HUD/TraumaLabel")
+
+[node name="noise" type="Node" parent="Player/Camera2D/CameraShake" index="0"]
+
+[node name="x" type="Node" parent="Player/Camera2D/CameraShake/noise" index="0"]
+
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+value_range = 2
+speed_range = 5
+acceleration_range = 100
+
+[node name="y" type="Node" parent="Player/Camera2D/CameraShake/noise" index="1"]
+
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+value_range = 2
+speed_range = 5
+acceleration_range = 100
+
+[node name="rot" type="Node" parent="Player/Camera2D/CameraShake/noise" index="2"]
+
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+value_range = 2
+speed_range = 5
+acceleration_range = 100
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/player_walk = SubResource( 1 )
+blend_times = [  ]
+
+[node name="World" type="Sprite" parent="." index="1"]
+
+modulate = Color( 0.523438, 0.523438, 0.523438, 0.530392 )
+scale = Vector2( 30, 30 )
+z_index = -1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="HUD" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="TraumaLabel" type="Label" parent="HUD" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
